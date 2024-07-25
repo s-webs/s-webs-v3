@@ -1,123 +1,103 @@
-<div class="portfolio-agency">
+<section class="portfolio-sliders">
     <div class="container">
         <div class="section-heading text-left style-two">
-            <h3 class="subtitle wow fadeInUp">Portfolio</h3>
-            <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Latest works</h2>
-        </div>
-        <!-- /.section-heading -->
-        <div class="filter__wrapper">
-            <ul class="astriol__isotope-filter style--two">
-                <li class="current">
-                    <a href="" data-filter="*">See All</a>
-                </li>
-                <li>
-                    <a href="" data-filter=".mobile">Mobile Apps</a>
-                </li>
-                <li>
-                    <a href="" data-filter=".branding">Branding</a>
-                </li>
-                <li>
-                    <a href="" data-filter=".design">Design</a>
-                </li>
-                <li>
-                    <a href="" data-filter=".commerce">Commerce</a>
-                </li>
-            </ul>
+            <h3 class="subtitle wow fadeInUp">Портфолио</h3>
+            <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Последние работы</h2>
 
-
-        </div>
-        <!-- /.filter__wrapper -->
-        <div class="astriol__isotope wow fadeIn" data-wow-delay="0.3s">
-            <div class="astriol__portfolio-items astriol__portfolio-items--three column-3 port-gutters">
-                <div class="grid-sizer"></div>
-
-                <div class="astriol__portfolio astriol__grid--item branding commerce design">
-                    <div class="astriol__portfolio-image">
-                        <img src="media/portfolio/a1.jpg" alt="portfolio thumb" />
-
-                        <div class="portfolio-info">
-                            <span>Website Design</span>
-                            <h3 class="portfolio-title"><a href="portfolio-single.html">Creative Tropical</a></h3>
-                        </div>
-
-                        <a href="portfolio-single.html" class="popup-image"><i class="ei ei-arrow_carrot-right"></i></a>
-                    </div>
-
+            <div class="social-slider-nav">
+                <div id="stesti-prev" class="slider-prev" tabindex="0" role="button" aria-label="Previous slide">
+                    <i class="ei ei-arrow_carrot-left"></i>
                 </div>
-
-                <div class="astriol__portfolio astriol__grid--item branding mobile">
-                    <div class="astriol__portfolio-image">
-                        <img src="media/portfolio/a2.jpg" alt="portfolio thumb" />
-
-                        <div class="portfolio-info">
-                            <span>Creative</span>
-                            <h3 class="portfolio-title"><a href="portfolio-single.html">Bronze Age</a></h3>
-                        </div>
-
-                        <a href="portfolio-single.html" class="popup-image"><i class="ei ei-arrow_carrot-right"></i></a>
-                    </div>
-
-                </div>
-
-                <div class="astriol__portfolio astriol__grid--item commerce design">
-                    <div class="astriol__portfolio-image">
-                        <img src="media/portfolio/a3.jpg" alt="portfolio thumb" />
-
-                        <div class="portfolio-info">
-                            <span>Design</span>
-                            <h3 class="portfolio-title"><a href="portfolio-single.html">Brown Tabby Manbatty</a></h3>
-                        </div>
-
-                        <a href="portfolio-single.html" class="popup-image"><i class="ei ei-arrow_carrot-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="astriol__portfolio astriol__grid--item branding">
-                    <div class="astriol__portfolio-image">
-                        <img src="media/portfolio/a4.jpg" alt="portfolio thumb" />
-
-                        <div class="portfolio-info">
-                            <span>Creative</span>
-                            <h3 class="portfolio-title"><a href="portfolio-single.html">California’s New</a></h3>
-                        </div>
-
-                        <a href="portfolio-single.html" class="popup-image"><i class="ei ei-arrow_carrot-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="astriol__portfolio astriol__grid--item branding design mobile">
-                    <div class="astriol__portfolio-image">
-                        <img src="media/portfolio/a5.jpg" alt="portfolio thumb" />
-
-                        <div class="portfolio-info">
-                            <span>Marketing</span>
-                            <h3 class="portfolio-title"><a href="portfolio-single.html">Snowflake Says</a></h3>
-                        </div>
-
-                        <a href="portfolio-single.html" class="popup-image"><i class="ei ei-arrow_carrot-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="astriol__portfolio  commerce mobile astriol__grid--item">
-                    <div class="astriol__portfolio-image">
-                        <img src="media/portfolio/a6.jpg" alt="portfolio thumb" />
-
-                        <div class="portfolio-info">
-                            <span>Technology</span>
-                            <h3 class="portfolio-title"><a href="portfolio-single.html">Clear Glass Light Bulb</a></h3>
-                        </div>
-
-                        <a href="portfolio-single.html" class="popup-image"><i class="ei ei-arrow_carrot-right"></i></a>
-                    </div>
-
+                <div id="stesti-next" class="slider-next" tabindex="0" role="button" aria-label="Next slide">
+                    <i class="ei ei-arrow_carrot-right"></i>
                 </div>
             </div>
         </div>
-        <div style="text-align: center">
-            <a href="about.html" class="gp-btn color-eight wow fadeInUp" data-wow-delay="0.7s">
-                Смотреть все проекты
-            </a>
-        </div>
     </div>
     <!-- /.container -->
-</div>
+
+    <div class="portfolio-slider-wrapper">
+        <div class="swiper-container wow fadeInUp" data-wow-delay="0.5s" id="portfolio-slider" data-space="40" data-autoplay="7000" data-breakpoints='{"1200": {"slidesPerView": 4, "spaceBetween": 50}, "768": {"slidesPerView": 3, "spaceBetween": 30}, "480": {"slidesPerView": 2, "spaceBetween": 30}, "320": {"slidesPerView": 1, "spaceBetween": 30}}'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="portfolio-item-slide">
+                        <div class="portfolio-image">
+                            <a href="#" class="popup-image">
+                                <img src="media/portfolio/1.jpg" alt="portfolio">
+                            </a>
+                        </div>
+                        <!-- /.portfolio-image -->
+
+                        <div class="portfolio-content">
+                            <h3 class="title"><a href="portfolio-single.html">Content Marketing</a></h3>
+                            <span class="port-cat">Digital SEO, UX</span>
+                        </div>
+                    </div>
+                    <!-- /.portfolio-item-slide -->
+                </div>
+                <!-- /.swiper-slide -->
+
+                <div class="swiper-slide">
+                    <div class="portfolio-item-slide">
+                        <div class="portfolio-image">
+                            <a href="#" class="popup-image">
+                                <img src="media/portfolio/2.jpg" alt="portfolio">
+
+                            </a>
+                        </div>
+                        <!-- /.portfolio-image -->
+
+                        <div class="portfolio-content">
+                            <h3 class="title"><a href="portfolio-single.html">SEO & Marketing</a></h3>
+                            <span class="port-cat">UI/UX Design</span>
+                        </div>
+                    </div>
+                    <!-- /.portfolio-item-slide -->
+                </div>
+                <!-- /.swiper-slide -->
+
+                <div class="swiper-slide">
+                    <div class="portfolio-item-slide">
+                        <div class="portfolio-image">
+                            <a href="#" class="popup-image">
+                                <img src="media/portfolio/3.jpg" alt="portfolio">
+                            </a>
+                        </div>
+                        <!-- /.portfolio-image -->
+
+                        <div class="portfolio-content">
+                            <h3 class="title"><a href="portfolio-single.html">Creative Tropical</a></h3>
+                            <span class="port-cat">Branding</span>
+                        </div>
+                    </div>
+                    <!-- /.portfolio-item-slide -->
+                </div>
+                <!-- /.swiper-slide -->
+
+                <div class="swiper-slide">
+                    <div class="portfolio-item-slide">
+                        <div class="portfolio-image">
+                            <a href="#" class="popup-image">
+                                <img src="media/portfolio/4.jpg" alt="portfolio">
+                            </a>
+                        </div>
+                        <!-- /.portfolio-image -->
+
+                        <div class="portfolio-content">
+                            <h3 class="title"><a href="portfolio-single.html">Keywords Results</a></h3>
+                            <span class="port-cat">Photography</span>
+                        </div>
+                    </div>
+                    <!-- /.portfolio-item-slide -->
+                </div>
+                <!-- /.swiper-slide -->
+            </div>
+            <!-- /.swiper-wrapper -->
+        </div>
+        <!-- /.swiper-container -->
+    </div>
+    <!-- /.slider-wrapper -->
+
+
+    <div class="white-shape"></div>
+</section>
