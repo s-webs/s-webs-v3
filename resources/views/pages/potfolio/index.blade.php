@@ -1,9 +1,6 @@
 @extends('layouts.master')
 @section('content')
-    <!--==========================-->
-    <!--=         Banner         =-->
-    <!--==========================-->
-    <section class="page-banner banner-bg" data-bg-image="media/banner/banner-bg.jpg">
+    <section class="page-banner banner-bg" data-bg-image="media/portfolio/portfolio_1920x400.png">
         <div class="page-title-wrapper text-center">
             <h1 class="page-title">Наши работы</h1>
             <ul class="breadcrumbs">
@@ -14,14 +11,8 @@
                 @endif
             </ul>
         </div>
-        <!-- /.page-title-wrapper -->
-
     </section>
-    <!-- /.page-banner -->
 
-    <!--=============================-->
-    <!--=         Portfolio         =-->
-    <!--=============================-->
     <section class="portfolios">
         <div class="container">
             <div class="portfolio-inner">

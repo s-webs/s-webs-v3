@@ -84,7 +84,8 @@
                         <div class="canvas-header">
                             <div class="mobile-offcanvas-logo">
                                 <a href="/">
-                                    <img src="/assets/img/logo-main.svg" alt="site logo" class="logo-sticky">
+                                    <img src="/assets/img/logo-main.svg" alt="site logo" class="logo-sticky"
+                                         style="width: 150px;">
                                 </a>
                             </div>
 
@@ -238,7 +239,7 @@
 
 <!-- Dependency Scripts -->
 <script src="/dependencies/jquery/jquery.min.js"></script>
-<script src="//dependencies/bootstrap/js/bootstrap.min.js"></script>
+<script src="/dependencies/bootstrap/js/bootstrap.min.js"></script>
 <script src="/dependencies/swiper/js/swiper.min.js"></script>
 <script src="/dependencies/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="/dependencies/imagesloaded/imagesloaded.pkgd.min.js"></script>
