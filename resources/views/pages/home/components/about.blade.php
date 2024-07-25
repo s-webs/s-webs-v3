@@ -4,13 +4,13 @@
             <div class="col-lg-6">
                 <div class="about-feature-image">
                     <div class="top-content wow fadeInLeft">
-                        <h4 class="ab-top-subtitle">Who we Are</h4>
+                        <h4 class="ab-top-subtitle">Чем мы занимаемся</h4>
                         <h3 class="ab-subtitle">
-                            Agency<br> Company
+                            S-WEBS
                         </h3>
                     </div>
                     <div class="image-wrapper wow fadeInRight">
-                        <img src="/media/about/1.jpg" alt="astriol about">
+                        <img src="/media/home/home_page_470x570.png" alt="astriol about">
                     </div>
                 </div>
             </div>
@@ -18,22 +18,24 @@
             <div class="col-lg-6">
                 <div class="about-content-wrapper">
                     <h2 class="about-title wow fadeInUp">
-                        Welcome to our Business <br> Digital Agency
+                        Добро пожаловать <br/> в нашу вэб студию
                     </h2>
                     <p class="wow fadeInUp" data-wow-delay="0.3s">
-                        Harry I nice one I don't want no agro such a fibber daft pukka some dodgy chav cheeky bugger
-                        cheers A bit of how's your father say at public school, chip shop bleeder barney I no biggie
-                        hanky panky cras absolutely.!
+                        Мы создаем адаптивные и оптимизированные веб-сайты с уникальным дизайном и удобным интерфейсом,
+                        обеспечивая вашим пользователям лучший опыт. Разрабатываем мощные и безопасные веб-приложения,
+                        которые автоматизируют бизнес-процессы и повышают эффективность ваших онлайн-сервисов.
+                        Предлагаем услуги 3D визуализации для архитектуры, дизайна и анимации, создавая реалистичные модели и сцены для ваших проектов.
                     </p>
 
                     <ul class="icon-lists color-eight wow fadeInUp" data-wow-delay="0.5s">
-                        <li><i class="ei ei-icon_check"></i>UI/UX design & app</li>
-                        <li><i class="ei ei-icon_check"></i>Professional Assistance</li>
-                        <li><i class="ei ei-icon_check"></i>Creative Design</li>
+                        <li><i class="ei ei-icon_check"></i>Разработка сайтов</li>
+                        <li><i class="ei ei-icon_check"></i>Разработка WEB приложений</li>
+                        <li><i class="ei ei-icon_check"></i>3D Визуализация</li>
                     </ul>
 
-                    <a href="about.html" class="gp-btn color-eight wow fadeInUp" data-wow-delay="0.7s">More About
-                        Us</a>
+{{--                    <a href="about.html" class="gp-btn color-eight wow fadeInUp" data-wow-delay="0.7s">--}}
+{{--                        Подробнее--}}
+{{--                    </a>--}}
                 </div>
                 <!-- /.about-content-wrapper -->
             </div>

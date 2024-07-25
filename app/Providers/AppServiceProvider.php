@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\ProjectCategory;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +21,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $categories = ProjectCategory::query()
+            ->where('is_active', 1)
+            ->whereHas('projects')
+            ->orderBy('order')
+            ->get();
+        View::share('categories', $categories);
     }
 }

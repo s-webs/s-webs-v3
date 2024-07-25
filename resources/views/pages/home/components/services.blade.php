@@ -6,8 +6,12 @@
 
     <div class="container">
         <div class="section-heading style-two">
-            <h3 class="subtitle wow fadeInUp">Services</h3>
-            <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Best Solutions for You</h2>
+            <h3 class="subtitle wow fadeInUp">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </h3>
+            <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Только лучшие решения</h2>
         </div>
 
         <div class="row">
@@ -24,14 +28,11 @@
 
                     <div class="box-content">
                         <h3 class="box-title">
-                            <a href="service.html">Highly Customizable</a>
+                            <a href="service.html">Адаптивность</a>
                         </h3>
-
                         <p>
-                            Tosser car boot ummm I'm telling hanky panky blower brown bread horse play boot
-                            starkers.!
+                            Адаптивный сайт обеспечивает отличный пользовательский опыт на любых устройствах, увеличивая конверсию.
                         </p>
-                        <a href="#" class="gp-btn color-eight btn-outline">Learn More</a>
                     </div>
                 </div>
 
@@ -53,14 +54,12 @@
 
                     <div class="box-content">
                         <h3 class="box-title">
-                            <a href="service.html">UI/UX Design</a>
+                            <a href="service.html">Производительность</a>
                         </h3>
 
                         <p>
-                            Tosser car boot ummm I'm telling hanky panky blower brown bread horse play boot
-                            starkers.!
+                            Высокая производительность благодаря ручному написанию кода без использования конструкторов
                         </p>
-                        <a href="#" class="gp-btn color-eight btn-outline">Learn More</a>
                     </div>
                 </div>
 
@@ -83,15 +82,12 @@
 
                     <div class="box-content">
                         <h3 class="box-title">
-                            <a href="service.html">Creative Design</a>
+                            <a href="service.html">Качество</a>
                         </h3>
 
                         <p>
-                            Tosser car boot ummm I'm telling hanky panky blower brown bread horse play boot
-                            starkers.!
+                            Гарантируем высокое качество и надежность, разрабатывая сайты вручную с использованием современных технологий.
                         </p>
-
-                        <a href="#" class="gp-btn color-eight btn-outline">Learn More</a>
                     </div>
                 </div>
 

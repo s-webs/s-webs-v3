@@ -2,13 +2,13 @@
     <div class="container">
         <div class="call-to-action-two">
             <div class="action-content wow gptFadeUp">
-                <h2 class="action-title">Прокачайте свой бизнес!<br> Врывайтесь в цифровое мир с нами!</h2>
+                <h2 class="action-title">Прокачайте свой бизнес!<br> Врывайтесь в цифровой мир с нами!</h2>
 
             </div>
             <!-- /.action-content -->
 
             <div class="action-button wow gptFadeUp" data-wow-delay="0.5s">
-                <a href="contact.html" class="gp-btn btn-light color-eight">Перейти</a>
+                <a href="{{route('pricing.index')}}" class="gp-btn btn-light color-eight">Перейти</a>
             </div>
             <!-- /.action-button -->
         </div>

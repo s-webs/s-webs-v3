@@ -149,4 +149,6 @@
         <!-- /.portfolio--releted-wrapper -->
     </section>
     <!-- /.portfolio-single -->
+
+    @include('pages.home.components.action')
 @endsection

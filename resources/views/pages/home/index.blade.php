@@ -7,15 +7,15 @@
 
     @include('pages.home.components.services')
 
-    @include('pages.home.components.intro')
+{{--    @include('pages.home.components.intro')--}}
 
     @include('pages.home.components.portfolio', compact('projects'))
 
-    @include('pages.home.components.pricing')
+{{--    @include('pages.home.components.pricing')--}}
 
-    @include('pages.home.components.testimonial')
+{{--    @include('pages.home.components.testimonial')--}}
 
-    @include('pages.home.components.blog')
+{{--    @include('pages.home.components.blog')--}}
 
     @include('pages.home.components.action')
 

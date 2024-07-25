@@ -47,4 +47,5 @@
         <!-- /.container -->
     </section>
     <!-- /.portfolios -->
+    @include('pages.home.components.action')
 @endsection

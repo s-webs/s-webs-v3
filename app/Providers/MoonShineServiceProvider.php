@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\MoonShine\Resources\PricingResource;
 use App\MoonShine\Resources\ProjectCategoryResource;
 use App\MoonShine\Resources\ProjectResource;
 use MoonShine\Providers\MoonShineApplicationServiceProvider;
@@ -45,6 +46,8 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
                 MenuItem::make('Категории', new ProjectCategoryResource()),
                 MenuItem::make('Проекты', new ProjectResource())
             ]),
+
+            MenuItem::make('Цены', new PricingResource()),
 
             MenuItem::make('Документация MoonShine', 'https://moonshine-laravel.com/docs')
                 ->badge(fn() => 'Check')

@@ -18,7 +18,8 @@
                         </p>
 
                         <a href="contact.html" class="gp-btn banner-btn color-eight wow fadeInUp"
-                           data-wow-delay="0.7s">Start a Project</a>
+                           data-wow-delay="0.7s">Начнем работать?
+                        </a>
                     </div>
                     <!-- /.banner-bitcoin-content -->
                 </div>
@@ -28,8 +29,8 @@
                 <div class="col-lg-6">
                     <div class="agency-banner-element-wrapper">
                         <ul class="banner-agency-animate-element">
-                            <li><img src="/media/banner/agency/1.png" class="wow gpUpX" alt="astriol"></li>
-                            <li><img src="/media/banner/agency/2.png" class="wow gpUpSmX" data-wow-delay="0.3s"
+                            <li><img src="/media/mockup/tablet.png" class="wow gpUpX" alt="astriol"></li>
+                            <li><img src="/media/mockup/mobile.png" class="wow gpUpSmX" data-wow-delay="0.3s"
                                      alt="astriol"></li>
                         </ul>
                     </div>
