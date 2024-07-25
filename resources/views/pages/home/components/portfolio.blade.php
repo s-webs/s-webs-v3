@@ -19,78 +19,24 @@
     <div class="portfolio-slider-wrapper">
         <div class="swiper-container wow fadeInUp" data-wow-delay="0.5s" id="portfolio-slider" data-space="40" data-autoplay="7000" data-breakpoints='{"1200": {"slidesPerView": 4, "spaceBetween": 50}, "768": {"slidesPerView": 3, "spaceBetween": 30}, "480": {"slidesPerView": 2, "spaceBetween": 30}, "320": {"slidesPerView": 1, "spaceBetween": 30}}'>
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="portfolio-item-slide">
-                        <div class="portfolio-image">
-                            <a href="#" class="popup-image">
-                                <img src="media/portfolio/1.jpg" alt="portfolio">
-                            </a>
-                        </div>
-                        <!-- /.portfolio-image -->
+                @foreach($projects as $project)
+                    <div class="swiper-slide">
+                        <div class="portfolio-item-slide">
+                            <div class="portfolio-image">
+                                <a href="{{route('portfolio.show', $project->slug)}}" class="popup-image">
+                                    <img src="/{{$project->image_preview}}" alt="portfolio">
+                                </a>
+                            </div>
+                            <!-- /.portfolio-image -->
 
-                        <div class="portfolio-content">
-                            <h3 class="title"><a href="portfolio-single.html">Content Marketing</a></h3>
-                            <span class="port-cat">Digital SEO, UX</span>
+                            <div class="portfolio-content">
+                                <h3 class="title"><a href="{{route('portfolio.show', $project->slug)}}">{{$project->name}}</a></h3>
+                                <span class="port-cat">{{$project->category->name}}</span>
+                            </div>
                         </div>
+                        <!-- /.portfolio-item-slide -->
                     </div>
-                    <!-- /.portfolio-item-slide -->
-                </div>
-                <!-- /.swiper-slide -->
-
-                <div class="swiper-slide">
-                    <div class="portfolio-item-slide">
-                        <div class="portfolio-image">
-                            <a href="#" class="popup-image">
-                                <img src="media/portfolio/2.jpg" alt="portfolio">
-
-                            </a>
-                        </div>
-                        <!-- /.portfolio-image -->
-
-                        <div class="portfolio-content">
-                            <h3 class="title"><a href="portfolio-single.html">SEO & Marketing</a></h3>
-                            <span class="port-cat">UI/UX Design</span>
-                        </div>
-                    </div>
-                    <!-- /.portfolio-item-slide -->
-                </div>
-                <!-- /.swiper-slide -->
-
-                <div class="swiper-slide">
-                    <div class="portfolio-item-slide">
-                        <div class="portfolio-image">
-                            <a href="#" class="popup-image">
-                                <img src="media/portfolio/3.jpg" alt="portfolio">
-                            </a>
-                        </div>
-                        <!-- /.portfolio-image -->
-
-                        <div class="portfolio-content">
-                            <h3 class="title"><a href="portfolio-single.html">Creative Tropical</a></h3>
-                            <span class="port-cat">Branding</span>
-                        </div>
-                    </div>
-                    <!-- /.portfolio-item-slide -->
-                </div>
-                <!-- /.swiper-slide -->
-
-                <div class="swiper-slide">
-                    <div class="portfolio-item-slide">
-                        <div class="portfolio-image">
-                            <a href="#" class="popup-image">
-                                <img src="media/portfolio/4.jpg" alt="portfolio">
-                            </a>
-                        </div>
-                        <!-- /.portfolio-image -->
-
-                        <div class="portfolio-content">
-                            <h3 class="title"><a href="portfolio-single.html">Keywords Results</a></h3>
-                            <span class="port-cat">Photography</span>
-                        </div>
-                    </div>
-                    <!-- /.portfolio-item-slide -->
-                </div>
-                <!-- /.swiper-slide -->
+                @endforeach
             </div>
             <!-- /.swiper-wrapper -->
         </div>

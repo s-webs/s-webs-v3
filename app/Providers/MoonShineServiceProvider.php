@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\MoonShine\Resources\ProjectCategoryResource;
+use App\MoonShine\Resources\ProjectResource;
 use MoonShine\Providers\MoonShineApplicationServiceProvider;
 use MoonShine\MoonShine;
 use MoonShine\Menu\MenuGroup;
@@ -39,6 +41,15 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
     protected function menu(): array
     {
         return [
+            MenuGroup::make('Портфолио', [
+                MenuItem::make('Категории', new ProjectCategoryResource()),
+                MenuItem::make('Проекты', new ProjectResource())
+            ]),
+
+            MenuItem::make('Документация MoonShine', 'https://moonshine-laravel.com/docs')
+                ->badge(fn() => 'Check')
+                ->blank(),
+
             MenuGroup::make(static fn() => __('moonshine::ui.resource.system'), [
                 MenuItem::make(
                     static fn() => __('moonshine::ui.resource.admins_title'),
@@ -49,10 +60,6 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
                     new MoonShineUserRoleResource()
                 ),
             ]),
-
-            MenuItem::make('Documentation', 'https://moonshine-laravel.com/docs')
-                ->badge(fn() => 'Check')
-                ->blank(),
         ];
     }
 

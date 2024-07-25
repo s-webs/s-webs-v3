@@ -12,13 +12,13 @@ return [
     'dir' => 'app/MoonShine',
     'namespace' => 'App\MoonShine',
 
-    'title' => env('MOONSHINE_TITLE', 'MoonShine'),
+    'title' => env('MOONSHINE_TITLE', 'S-WEBS | CRM'),
     'logo' => env('MOONSHINE_LOGO'),
     'logo_small' => env('MOONSHINE_LOGO_SMALL'),
 
     'route' => [
         'domain' => env('MOONSHINE_URL', ''),
-        'prefix' => env('MOONSHINE_ROUTE_PREFIX', 'admin'),
+        'prefix' => env('MOONSHINE_ROUTE_PREFIX', 'crm'),
         'single_page_prefix' => 'page',
         'index' => 'moonshine.index',
         'middlewares' => [

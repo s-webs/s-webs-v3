@@ -9,7 +9,7 @@
 
     @include('pages.home.components.intro')
 
-    @include('pages.home.components.portfolio')
+    @include('pages.home.components.portfolio', compact('projects'))
 
     @include('pages.home.components.pricing')
 

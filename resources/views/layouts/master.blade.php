@@ -6,12 +6,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home Agency — Multipurpose Saas Landing Page</title>
+    <title>Разработка сайтов | S-WEBS</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
-    <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/favicon-s-webs.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-s-webs.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-s-webs.png">
+    <link rel="mask-icon" href="/assets/img/favicon/favicon-s-webs.png" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
@@ -71,9 +71,11 @@
                 <nav id="site-navigation" class="main-nav">
 
                     <div class="site-logo">
-                        <a href="index.html" class="logo">
-                            <img src="/assets/img/logo-main.svg" alt="site logo" class="main-logo" style="width: 200px;">
-                            <img src="/assets/img/logo-main.svg" alt="site logo" class="logo-sticky" style="width: 200px;">
+                        <a href="/" class="logo">
+                            <img src="/assets/img/logo-main.svg" alt="site logo" class="main-logo"
+                                 style="width: 200px;">
+                            <img src="/assets/img/logo-main.svg" alt="site logo" class="logo-sticky"
+                                 style="width: 200px;">
                         </a>
                     </div>
                     <!-- /.site-logo -->
@@ -81,7 +83,7 @@
                     <div class="menu-wrapper main-nav-container canvas-menu-wrapper" id="mega-menu-wrap">
                         <div class="canvas-header">
                             <div class="mobile-offcanvas-logo">
-                                <a href="index.html">
+                                <a href="/">
                                     <img src="/assets/img/logo-main.svg" alt="site logo" class="logo-sticky">
                                 </a>
                             </div>
@@ -104,7 +106,7 @@
                                 </ul>
                             </li>
                             <li class="menu-item-depth-0">
-                                <a href="##">Портфолио</a>
+                                <a href="{{route('portfolio.all')}}">Портфолио</a>
                             </li>
                             <li class="has-submenu menu-item-depth-0">
                                 <a href="##">Блог</a>

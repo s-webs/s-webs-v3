@@ -21,6 +21,7 @@ return new class extends Migration {
             $table->boolean('is_active')->default(true);
             $table->boolean('favorite')->default(false);
             $table->integer('order')->default(0);
+            $table->string('slug')->unique();
             $table->text('image_main');
             $table->text('image_preview');
             $table->text('image_770x500_1')->nullable();

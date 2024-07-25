@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProjectCategory extends Model
 {
-    use HasFactory;
+    public function projects(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Project::class, 'category_id');
+    }
 }
