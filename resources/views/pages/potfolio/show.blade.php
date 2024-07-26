@@ -30,22 +30,12 @@
                             </li>
                             <li>
                                 <h5 class="info-title">Клиент</h5>
-                                @if($project->link)
-                                    <a href="{{$project->link}}" class="info" target="_blank">{{$project->client}}</a>
-                                @else
                                     <span class="info">{{$project->client}}</span>
-                                @endif
                             </li>
                             @if($project->link)
                                 <li>
                                     <h5 class="info-title">Ссылка на сайт</h5>
-                                    <a href="{{$project->link}}" class="info" target="_blank">Перейти на сайт</a>
-                                </li>
-                            @endif
-                            @if($project->link)
-                                <li>
-                                    <h5 class="info-title">Ссылка</h5>
-                                    <a href="{{$project->link}}" class="info" target="_blank">Посмотреть</a>
+                                    <a href="{{$project->link}}" target="_blank">Перейти</a>
                                 </li>
                             @endif
                         </ul>
