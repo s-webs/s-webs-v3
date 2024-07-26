@@ -38,6 +38,12 @@
                             </li>
                             @if($project->link)
                                 <li>
+                                    <h5 class="info-title">Ссылка на сайт</h5>
+                                    <a href="{{$project->link}}" class="info" target="_blank">Перейти на сайт</a>
+                                </li>
+                            @endif
+                            @if($project->link)
+                                <li>
                                     <h5 class="info-title">Ссылка</h5>
                                     <a href="{{$project->link}}" class="info" target="_blank">Посмотреть</a>
                                 </li>

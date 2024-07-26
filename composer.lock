@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94ba0f0b03ef7e94106daf6dd2c277f8",
+    "content-hash": "41fabd9c07e021206a081a30710155f1",
     "packages": [
         {
             "name": "brick/math",
@@ -1861,6 +1861,66 @@
                 "source": "https://github.com/lee-to/laravel-package-command/tree/0.9.1"
             },
             "time": "2023-01-31T10:29:24+00:00"
+        },
+        {
+            "name": "lee-to/laravel-seo-by-url",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lee-to/laravel-seo-by-url.git",
+                "reference": "84fa66270b80c33da5068c4099cc1f7684c2295e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lee-to/laravel-seo-by-url/zipball/84fa66270b80c33da5068c4099cc1f7684c2295e",
+                "reference": "84fa66270b80c33da5068c4099cc1f7684c2295e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0|^8.1|^8.2"
+            },
+            "require-dev": {
+                "fakerphp/faker": "^1.9.2",
+                "mockery/mockery": "^1.4.4",
+                "orchestra/testbench": "^7.5",
+                "phpunit/phpunit": "^9.5.8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Leeto\\Seo\\Providers\\SeoServiceProvider"
+                    ],
+                    "aliases": {
+                        "Seo": "Leeto\\Seo\\Seo"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Leeto\\Seo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Danil Shutsky",
+                    "email": "info@cutcode.ru",
+                    "homepage": "https://github.com/lee-to"
+                }
+            ],
+            "description": "Easy seo for Laravel and MoonShine",
+            "support": {
+                "issues": "https://github.com/lee-to/laravel-seo-by-url/issues",
+                "source": "https://github.com/lee-to/laravel-seo-by-url/tree/1.0.2"
+            },
+            "time": "2024-07-08T07:51:47+00:00"
         },
         {
             "name": "monolog/monolog",

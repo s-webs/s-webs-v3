@@ -8,6 +8,7 @@
         "php": "^8.2",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
+        "lee-to/laravel-seo-by-url": "^1.0",
         "moonshine/moonshine": "^2.19"
     },
     "require-dev": {

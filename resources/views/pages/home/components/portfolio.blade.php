@@ -23,7 +23,7 @@
                     <div class="swiper-slide">
                         <div class="portfolio-item-slide">
                             <div class="portfolio-image">
-                                <a href="{{route('portfolio.show', $project->slug)}}" class="popup-image">
+                                <a href="/{{$project->image_preview}}" class="popup-image">
                                     <img src="/{{$project->image_preview}}" alt="portfolio">
                                 </a>
                             </div>
