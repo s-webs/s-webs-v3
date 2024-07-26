@@ -42,4 +42,8 @@
             margin-top: 40px;
         }
     }
+
+    .loading {
+        font-size: 48px;
+    }
 }

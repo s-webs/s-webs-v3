@@ -113,7 +113,7 @@
 
                     <div class="swiper-container" id="related-portfolio" data-speed="700" data-autoplay="5000"
                          data-perpage="3" data-space="30"
-                         data-breakpoints='{"1024": {"slidesPerView": 3}, "640": {"slidesPerView": 2}}'>
+                         data-breakpoints='{"1200": {"slidesPerView": 4, "spaceBetween": 50}, "768": {"slidesPerView": 3, "spaceBetween": 30}, "480": {"slidesPerView": 2, "spaceBetween": 30}, "320": {"slidesPerView": 1, "spaceBetween": 30}}'>
                         <div class="swiper-wrapper">
                             @foreach($lastProjects as $project)
                                 <div class="swiper-slide">
