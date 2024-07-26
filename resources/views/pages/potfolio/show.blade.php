@@ -54,26 +54,28 @@
                 <!-- /.portfolio__content-top -->
 
                 <div class="portfolio--single-gallery">
-
                     <div class="row">
                         <div class="col-sm-8">
                             <div class="gallery--image">
-                                <img src="/{{$project->image_770x500_1}}" alt="{{$project->name}}">
-                                <img src="/{{$project->image_770x500_2}}" alt="{{$project->name}}">
+                                @if($project->image_770x500_1)
+                                    <img src="/{{$project->image_770x500_1}}" alt="{{$project->name}}">
+                                @endif
+                                @if($project->image_770x500_2)
+                                    <img src="/{{$project->image_770x500_2}}" alt="{{$project->name}}">
+                                @endif
                             </div>
                         </div>
-                        <!-- /.col-sm-8 -->
-
                         <div class="col-sm-4">
                             <div class="gallery--image">
-                                <img src="/{{$project->image_370x600}}" alt="{{$project->name}}">
-                                <img src="/{{$project->image_370x400}}" alt="{{$project->name}}">
+                                @if($project->image_370x600)
+                                    <img src="/{{$project->image_370x600}}" alt="{{$project->name}}">
+                                @endif
+                                @if($project->image_370x400)
+                                    <img src="/{{$project->image_370x400}}" alt="{{$project->name}}">
+                                @endif
                             </div>
                         </div>
-                        <!-- /.col-sm-4 -->
                     </div>
-                    <!-- /.row -->
-
 
                 </div>
                 <!-- /.portfolio--single-gallery -->
@@ -129,7 +131,8 @@
                                                 </a>
                                             </h3>
 
-                                            <span><a href="{{route('portfolio.index', $project->category->id)}}">{{$project->category->name}}</a></span>
+                                            <span><a
+                                                    href="{{route('portfolio.index', $project->category->id)}}">{{$project->category->name}}</a></span>
                                         </div>
                                     </div>
                                     <!-- /.portfolio-item -->
@@ -137,7 +140,6 @@
                             @endforeach
                         </div>
                         <!-- /.swiper-wrapper -->
-
                         <div class="swiper-pagination"></div>
                     </div>
                     <!-- /.swiper-container -->

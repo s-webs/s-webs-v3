@@ -27,14 +27,14 @@
                     <div class="astriol__portfolio-items portfolio-one column-2 port-gutters">
                         <div class="grid-sizer"></div>
                         @foreach($projects as $project)
-                            <div class="astriol__portfolio grid-item">
+                            <div class="astriol__portfolio grid-item w-full">
                                 <div class="astriol__portfolio-image">
                                     <img src="/{{$project->image_preview}}" alt="portfolio thumb"/>
                                     <div class="portfolio-info">
                                         <h3 class="portfolio-title">
                                             <a href="{{route('portfolio.show', $project->slug)}}">{{$project->name}}</a>
                                         </h3>
-                                        <span>{{$project->category->name}}</span>
+                                        <span class="project-type">{{$project->category->name}}</span>
                                     </div>
                                 </div>
                             </div>

@@ -29,6 +29,7 @@
 
     <!-- Site Stylesheet -->
     <link rel="stylesheet" href="/assets/css/app.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/custom.css" type="text/css">
 
     <!-- Google Web Fonts -->
     <link

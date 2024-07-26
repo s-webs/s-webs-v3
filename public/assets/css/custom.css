@@ -1,0 +1,38 @@
+@media(max-width: 767.98px) {
+    .astriol__portfolio-image .portfolio-info {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 10px;
+    }
+
+    .astriol__portfolio-image .portfolio-info h3 {
+        font-size: 12px;
+    }
+
+    .astriol__portfolio-image .portfolio-info span  {
+        font-size: 10px;
+    }
+
+    .portfolio__content-top {
+        /*flex-direction: column-reverse;*/
+    }
+
+    .portfolio__content-info {
+        width: 100%;
+        border-top: 1px solid #b6b6b6;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .portfolio__content-des {
+        width: 100%;
+        padding-right: 0;
+    }
+
+}
