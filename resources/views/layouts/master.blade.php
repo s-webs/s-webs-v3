@@ -73,8 +73,13 @@
 
                     <div class="site-logo">
                         <a href="/" class="logo">
-                            <img src="/assets/img/logo-main.svg" alt="site logo" class="main-logo"
-                                 style="width: 200px;">
+                            @if (request()->is('/'))
+                                <img src="/assets/img/logo-main.svg" alt="site logo" class="main-logo"
+                                     style="width: 200px;">
+                            @else
+                                <img src="/assets/img/logo-main-light.svg" alt="site logo" class="main-logo"
+                                     style="width: 200px;">
+                            @endif
                             <img src="/assets/img/logo-main.svg" alt="site logo" class="logo-sticky"
                                  style="width: 200px;">
                         </a>
@@ -100,33 +105,36 @@
                             <li class="menu-item-depth-0">
                                 <a href="/">Главная</a>
                             </li>
-{{--                            <li class="has-submenu menu-item-depth-0">--}}
-{{--                                <a href="##">О нас</a>--}}
-{{--                                <ul class="sub-menu">--}}
-{{--                                    <li><a href="##">Наша команда</a></li>--}}
-{{--                                    <li><a href="##">Цены</a></li>--}}
-{{--                                </ul>--}}
-{{--                            </li>--}}
+                            {{--                            <li class="has-submenu menu-item-depth-0">--}}
+                            {{--                                <a href="##">О нас</a>--}}
+                            {{--                                <ul class="sub-menu">--}}
+                            {{--                                    <li><a href="##">Наша команда</a></li>--}}
+                            {{--                                    <li><a href="##">Цены</a></li>--}}
+                            {{--                                </ul>--}}
+                            {{--                            </li>--}}
                             <li class="has-submenu menu-item-depth-0">
                                 <a href="{{route('portfolio.all')}}">Портфолио</a>
                                 <ul class="sub-menu">
                                     <li><a href="{{route('portfolio.all')}}">Все наши работы</a></li>
                                     @foreach($categories as $category)
-                                        <li><a href="{{route('portfolio.index', $category->id)}}">{{$category->name}}</a></li>
+                                        <li>
+                                            <a href="{{route('portfolio.index', $category->id)}}">{{$category->name}}</a>
+                                        </li>
                                     @endforeach
                                 </ul>
                             </li>
-{{--                            <li class="menu-item-depth-0">--}}
-{{--                                <a href="##">Блог</a>--}}
-{{--                            </li>--}}
-{{--                            <li class="menu-item-depth-0">--}}
-{{--                                <a href="##">Маркет</a>--}}
-{{--                            </li>--}}
-{{--                            <li class="menu-item-depth-0"><a href="##">Контакты</a></li>--}}
+                            {{--                            <li class="menu-item-depth-0">--}}
+                            {{--                                <a href="##">Блог</a>--}}
+                            {{--                            </li>--}}
+                            {{--                            <li class="menu-item-depth-0">--}}
+                            {{--                                <a href="##">Маркет</a>--}}
+                            {{--                            </li>--}}
+                            {{--                            <li class="menu-item-depth-0"><a href="##">Контакты</a></li>--}}
                         </ul>
 
                         <div class="nav-right">
-                            <a href="{{route('pricing.index')}}" class="gp-btn color-eight btn-light btn-outline btn-round">
+                            <a href="{{route('pricing.index')}}"
+                               class="gp-btn color-eight btn-light btn-outline btn-round">
                                 Цены
                             </a>
                         </div>

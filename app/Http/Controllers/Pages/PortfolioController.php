@@ -13,13 +13,16 @@ class PortfolioController extends Controller
     public function index($id)
     {
         $category = ProjectCategory::query()->findOrFail($id);
-        $projects = $category->projects;
+        $projects = $category->projects()
+            ->where('is_active', true)
+            ->orderBy('order', 'desc')
+            ->get();
         return view('pages.potfolio.index', compact('category', 'projects'));
     }
 
     public function all()
     {
-        $projects = Project::query()->where('is_active', true)->get();
+        $projects = Project::query()->where('is_active', true)->orderBy('order', 'desc')->get();
         return view('pages.potfolio.index', compact('projects'));
     }
 

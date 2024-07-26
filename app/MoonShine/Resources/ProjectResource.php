@@ -33,6 +33,9 @@ class ProjectResource extends ModelResource
 
     protected string $title = 'Проекты';
 
+    protected bool $editInModal = true;
+    protected bool $createInModal = true;
+
     public function redirectAfterSave(): string
     {
         return '/crm/resource/project-resource/index-page';
@@ -50,45 +53,64 @@ class ProjectResource extends ModelResource
                     Tab::make('Основная информация', [
                         BelongsTo::make('Категория', 'category', resource: new ProjectCategoryResource()),
                         Text::make('Название', 'name'),
-                        Textarea::make('Описание', 'description'),
+                        Textarea::make('Описание', 'description')
+                            ->hideOnIndex(),
                         Number::make('Год разработки', 'year'),
-                        Text::make('Клиент', 'client'),
-                        Url::make('Ссылка', 'link')->nullable(),
-                        Switcher::make('Активно','is_active'),
+                        Text::make('Клиент', 'client')
+                            ->hideOnIndex(),
+                        Url::make('Ссылка', 'link')
+                            ->nullable()
+                        ->hideOnIndex(),
+                        Switcher::make('Активно', 'is_active'),
                         Switcher::make('Избранное', 'favorite'),
                         Number::make('Сортировка', 'order'),
                         Slug::make('Slug', 'slug')
-                        ->from('name')
+                            ->from('name')
+                            ->hideOnIndex()
                     ]),
                     Tab::make('Изображения', [
                         Image::make('Главное изображение', 'image_main')
-                        ->disk('public')
-                        ->dir('site-media/portfolio-projects')
-                        ->removable(),
+                            ->disk('public')
+                            ->dir('site-media/portfolio-projects')
+                            ->removable()
+                            ->hideOnIndex(),
                         Image::make('Превью', 'image_preview')
                             ->disk('public')
                             ->dir('site-media/portfolio-projects')
-                            ->removable(),
-                        Image::make( 'image_770x500_1')
+                            ->removable()
+                            ->hideOnIndex(),
+                        Image::make('image_770x500_1')
                             ->disk('public')
                             ->dir('site-media/portfolio-projects')
-                            ->removable(),
-                        Image::make( 'image_770x500_2')
+                            ->removable()
+                            ->hideOnIndex(),
+                        Image::make('image_770x500_2')
                             ->disk('public')
                             ->dir('site-media/portfolio-projects')
-                            ->removable(),
-                        Image::make( 'image_370x600')
+                            ->removable()
+                            ->hideOnIndex(),
+                        Image::make('image_370x600')
                             ->disk('public')
                             ->dir('site-media/portfolio-projects')
-                            ->removable(),
-                        Image::make( 'image_370x400')
+                            ->removable()
+                            ->hideOnIndex(),
+                        Image::make('image_370x400')
                             ->disk('public')
                             ->dir('site-media/portfolio-projects')
-                            ->removable(),
+                            ->removable()
+                            ->hideOnIndex(),
                     ]),
                 ])
             ]),
         ];
+    }
+
+    protected function resolveOrder(): static
+    {
+        $this->sortColumn = 'order';
+        $this->sortDirection = 'DESC';
+
+        return parent::resolveOrder();
     }
 
     /**
