@@ -17,6 +17,7 @@ use MoonShine\Fields\Slug;
 use MoonShine\Fields\Switcher;
 use MoonShine\Fields\Text;
 use MoonShine\Fields\Textarea;
+use MoonShine\Fields\TinyMce;
 use MoonShine\Fields\Url;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
@@ -53,7 +54,7 @@ class ProjectResource extends ModelResource
                     Tab::make('Основная информация', [
                         BelongsTo::make('Категория', 'category', resource: new ProjectCategoryResource()),
                         Text::make('Название', 'name'),
-                        Textarea::make('Описание', 'description')
+                        TinyMce::make('Описание', 'description')
                             ->hideOnIndex(),
                         Number::make('Год разработки', 'year'),
                         Text::make('Клиент', 'client')

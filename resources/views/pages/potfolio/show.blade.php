@@ -16,9 +16,7 @@
                 <div class="portfolio__content-top">
                     <div class="portfolio__content-des">
                         <h3 class="title">Описание проекта</h3>
-                        <p>
-                            {{$project->description}}
-                        </p>
+                        {!! $project->description !!}
                     </div>
                     <!-- /.portfolio__content-des -->
 
@@ -30,7 +28,7 @@
                             </li>
                             <li>
                                 <h5 class="info-title">Клиент</h5>
-                                    <span class="info">{{$project->client}}</span>
+                                <span class="info">{{$project->client}}</span>
                             </li>
                             @if($project->link)
                                 <li>
@@ -128,7 +126,7 @@
                                             </h3>
 
                                             <span><a
-                                                    href="{{route('portfolio.index', $project->category->id)}}">{{$project->category->name}}</a></span>
+                                                        href="{{route('portfolio.index', $project->category->id)}}">{{$project->category->name}}</a></span>
                                         </div>
                                     </div>
                                     <!-- /.portfolio-item -->
