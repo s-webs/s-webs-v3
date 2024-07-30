@@ -35,7 +35,7 @@ return [
     // Ex: The private folder of user will be named as the user id.
     'private_folder_name'      => UniSharp\LaravelFilemanager\Handlers\ConfigHandler::class,
 
-    'allow_shared_folder'      => true,
+    'allow_shared_folder'      => false,
 
     'shared_folder_name'       => 'shares',
 
@@ -58,13 +58,14 @@ return [
                 'image/pjpeg',
                 'image/png',
                 'image/gif',
+                'image/webp',
                 'application/pdf',
                 'text/plain',
             ],
         ],
         'image' => [
-            'folder_name'  => 'photos',
-            'startup_view' => 'grid',
+            'folder_name'  => 'files',
+            'startup_view' => 'list',
             'max_size'     => 50000, // size in KB
             'thumb' => true,
             'thumb_width' => 80,
@@ -74,6 +75,7 @@ return [
                 'image/pjpeg',
                 'image/png',
                 'image/gif',
+                'image/webp',
             ],
         ],
     ],
@@ -96,9 +98,9 @@ return [
 
     'disk'                     => 'public',
 
-    'rename_file'              => false,
+    'rename_file'              => true,
 
-    'rename_duplicates'        => false,
+    'rename_duplicates'        => true,
 
     'alphanumeric_filename'    => false,
 
@@ -111,7 +113,7 @@ return [
     // behavior on files with identical name
     // setting it to true cause old file replace with new one
     // setting it to false show `error-file-exist` error and stop upload
-    'over_write_on_duplicate'  => false,
+    'over_write_on_duplicate'  => true,
 
     // mimetypes of executables to prevent from uploading
     'disallowed_mimetypes' => ['text/x-php', 'text/html', 'text/plain'],
@@ -129,7 +131,7 @@ return [
      */
 
     // If true, image thumbnails would be created during upload
-    'should_create_thumbnails' => true,
+    'should_create_thumbnails' => false,
 
     'thumb_folder_name'        => 'thumbs',
 
@@ -138,6 +140,7 @@ return [
         'image/jpeg',
         'image/pjpeg',
         'image/png',
+        'image/webp'
     ],
 
     'thumb_img_width'          => 200, // px

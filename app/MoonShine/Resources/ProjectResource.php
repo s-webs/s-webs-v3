@@ -27,8 +27,6 @@ use MoonShine\Decorations\Block;
 use MoonShine\Fields\ID;
 use MoonShine\Fields\Field;
 use MoonShine\Components\MoonShineComponent;
-use Sweet1s\MoonshineFileManager\FileManager;
-use Sweet1s\MoonshineFileManager\FileManagerTypeEnum;
 
 /**
  * @extends ModelResource<Project>
@@ -55,9 +53,9 @@ class ProjectResource extends ModelResource
         return [
             Block::make([
                 ID::make()->sortable(),
-                Image::make('Изображение', 'image_main')
-                    ->hideOnAll()
-                    ->showOnIndex(),
+                Image::make('Превью', 'image_preview')
+                ->hideOnAll()
+                ->showOnIndex(),
                 Tabs::make([
                     Tab::make('Основная информация', [
                         BelongsTo::make('Категория', 'category', resource: new ProjectCategoryResource()),
@@ -69,7 +67,7 @@ class ProjectResource extends ModelResource
                             ->hideOnIndex(),
                         Url::make('Ссылка', 'link')
                             ->nullable()
-                            ->hideOnIndex(),
+                        ->hideOnIndex(),
                         Switcher::make('Активно', 'is_active'),
                         Switcher::make('Избранное', 'favorite'),
                         Number::make('Сортировка', 'order'),
@@ -78,28 +76,34 @@ class ProjectResource extends ModelResource
                             ->hideOnIndex()
                     ]),
                     Tab::make('Изображения', [
-                        FileManager::make('Главное изображение', 'image_main')
-                            ->typeOfFileManager(FileManagerTypeEnum::Image)
+                        Image::make('Главное изображение', 'image_main')
+                            ->disk('public')
+                            ->dir('site-media/portfolio-projects')
                             ->removable()
                             ->hideOnIndex(),
-                        FileManager::make('Превью', 'image_preview')
-                            ->typeOfFileManager(FileManagerTypeEnum::Image)
+                        Image::make('Превью', 'image_preview')
+                            ->disk('public')
+                            ->dir('site-media/portfolio-projects')
                             ->removable()
                             ->hideOnIndex(),
-                        FileManager::make('image_770x500_1')
-                            ->typeOfFileManager(FileManagerTypeEnum::Image)
+                        Image::make('image_770x500_1')
+                            ->disk('public')
+                            ->dir('site-media/portfolio-projects')
                             ->removable()
                             ->hideOnIndex(),
-                        FileManager::make('image_770x500_2')
-                            ->typeOfFileManager(FileManagerTypeEnum::Image)
+                        Image::make('image_770x500_2')
+                            ->disk('public')
+                            ->dir('site-media/portfolio-projects')
                             ->removable()
                             ->hideOnIndex(),
-                        FileManager::make('image_370x600')
-                            ->typeOfFileManager(FileManagerTypeEnum::Image)
+                        Image::make('image_370x600')
+                            ->disk('public')
+                            ->dir('site-media/portfolio-projects')
                             ->removable()
                             ->hideOnIndex(),
-                        FileManager::make('image_370x400')
-                            ->typeOfFileManager(FileManagerTypeEnum::Image)
+                        Image::make('image_370x400')
+                            ->disk('public')
+                            ->dir('site-media/portfolio-projects')
                             ->removable()
                             ->hideOnIndex(),
                     ]),
