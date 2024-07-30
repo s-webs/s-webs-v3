@@ -11,6 +11,7 @@
         "lee-to/laravel-seo-by-url": "^1.0",
         "moonshine/moonshine": "^2.19",
         "spatie/laravel-sitemap": "^7.2",
+        "sweet1s/moonshine-filemanager": "^1.0",
         "unisharp/laravel-filemanager": "^2.9"
     },
     "require-dev": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb30cdafbc3552debb657beb33f51861",
+    "content-hash": "269c20011f2825c6b52c1f6150be4c59",
     "packages": [
         {
             "name": "brick/math",
@@ -4111,6 +4111,72 @@
                 }
             ],
             "time": "2023-12-25T11:46:58+00:00"
+        },
+        {
+            "name": "sweet1s/moonshine-filemanager",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SWEET1S/moonshine-filemanager.git",
+                "reference": "38fbb15410024fd87a0efab4e5a7fa75bf989dce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SWEET1S/moonshine-filemanager/zipball/38fbb15410024fd87a0efab4e5a7fa75bf989dce",
+                "reference": "38fbb15410024fd87a0efab4e5a7fa75bf989dce",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": "^8.1|^8.2|^8.3"
+            },
+            "require-dev": {
+                "brianium/paratest": "^6.8",
+                "mockery/mockery": "^1.4.4",
+                "moonshine/moonshine": "^2.0",
+                "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0|^8.0",
+                "phpstan/phpstan": "^1.4.7",
+                "phpunit/phpunit": "^9.5.8",
+                "unisharp/laravel-filemanager": "^2.7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Sweet1s\\MoonshineFileManager\\Providers\\MoonshineFileManagerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sweet1s\\MoonshineFileManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrei Balan",
+                    "email": "abalan1510it@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Moonshine File Manager is a Laravel package that provides a simple way to manage files and folders in your Laravel application.",
+            "homepage": "https://moonshine-laravel.com/",
+            "keywords": [
+                "filemanager",
+                "laravel",
+                "medialibrary",
+                "moonshine"
+            ],
+            "support": {
+                "issues": "https://github.com/sweet1s/moonshine-filemanager/issues",
+                "source": "https://github.com/sweet1s/moonshine-filemanager"
+            },
+            "time": "2024-05-03T09:00:24+00:00"
         },
         {
             "name": "symfony/clock",
