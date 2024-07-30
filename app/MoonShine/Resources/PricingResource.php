@@ -52,19 +52,24 @@ class PricingResource extends ModelResource
                             Tab::make('Опции', [
                                 Json::make('Опции', 'options')
                                     ->onlyValue()
-                                    ->removable(),
+                                    ->removable()
+                                ->hideOnIndex(),
                             ]),
                             Tab::make('Контент', [
-                                TinyMce::make('Контент', 'description'),
+                                TinyMce::make('Контент', 'description')
+                                ->hideOnIndex(),
                             ])
                         ]),
                     ])
                 ])->columnSpan(8),
                 Column::make([
                     Block::make('SEO', [
-                        Text::make('Seo title', 'seo_title'),
-                        Textarea::make('Seo description', 'seo_description'),
-                        Text::make('Seo keywords', 'seo_keywords'),
+                        Text::make('Seo title', 'seo_title')
+                        ->hideOnIndex(),
+                        Textarea::make('Seo description', 'seo_description')
+                        ->hideOnIndex(),
+                        Text::make('Seo keywords', 'seo_keywords')
+                        ->hideOnIndex(),
                     ]),
                     Block::make('Настройки', [
                         Switcher::make('Активен', 'is_active')
