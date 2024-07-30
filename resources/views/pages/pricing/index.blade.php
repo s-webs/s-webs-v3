@@ -48,8 +48,10 @@
                                         <li><i class="ei ei-icon_check"></i> {{$option}}</li>
                                     @endforeach
                                 </ul>
-                                <a href="{{route('pricing.show', $price->slug)}}" class="gp-btn btn-outline"
-                                   style="margin-top: 45px;">Подробнее</a>
+                                @if($price->slug)
+                                    <a href="{{route('pricing.show', $price->slug)}}" class="gp-btn btn-outline"
+                                       style="margin-top: 45px;">Подробнее</a>
+                                @endif
                             </div>
                         </div>
                     @else
@@ -67,8 +69,10 @@
                                         <li><i class="ei ei-icon_check"></i> {{$option}}</li>
                                     @endforeach
                                 </ul>
-                                <a href="{{route('pricing.show', $price->slug)}}" class="gp-btn btn-outline"
-                                   style="margin-top: 45px;">Подробнее</a>
+                                @if($price->slug)
+                                    <a href="{{route('pricing.show', $price->slug)}}" class="gp-btn btn-outline"
+                                       style="margin-top: 45px;">Подробнее</a>
+                                @endif
                             </div>
                         </div>
                     @endif
