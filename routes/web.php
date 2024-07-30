@@ -7,3 +7,4 @@ Route::get('/portfolio/{slug}', [\App\Http\Controllers\Pages\PortfolioController
 Route::get('/portfolio-all', [\App\Http\Controllers\Pages\PortfolioController::class, 'all'])->name('portfolio.all');
 Route::get('/portfolio-{id}', [\App\Http\Controllers\Pages\PortfolioController::class, 'index'])->name('portfolio.index');
 Route::get('/pricing', [\App\Http\Controllers\Pages\PricingController::class, 'index'])->name('pricing.index');
+Route::get('/pricing/{slug}', [\App\Http\Controllers\Pages\PricingController::class, 'show'])->name('pricing.show');

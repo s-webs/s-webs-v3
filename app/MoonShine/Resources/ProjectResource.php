@@ -7,6 +7,7 @@ namespace App\MoonShine\Resources;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Project;
 
+use Illuminate\Database\Eloquent\Builder;
 use MoonShine\Decorations\Tab;
 use MoonShine\Decorations\Tabs;
 use MoonShine\Enums\PageType;
@@ -19,6 +20,8 @@ use MoonShine\Fields\Text;
 use MoonShine\Fields\Textarea;
 use MoonShine\Fields\TinyMce;
 use MoonShine\Fields\Url;
+use MoonShine\Metrics\ValueMetric;
+use MoonShine\QueryTags\QueryTag;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
 use MoonShine\Fields\ID;
@@ -112,6 +115,22 @@ class ProjectResource extends ModelResource
         $this->sortDirection = 'DESC';
 
         return parent::resolveOrder();
+    }
+
+    public function queryTags(): array
+    {
+        return [
+            QueryTag::make('Активные', fn(Builder $query) => $query->where('is_active', true)),
+            QueryTag::make('Неактивные', fn(Builder $query) => $query->where('is_active', false)),
+        ];
+    }
+
+    public function metrics(): array
+    {
+        return [
+            ValueMetric::make('Проекты')
+                ->value(Project::count()),
+        ];
     }
 
     /**
