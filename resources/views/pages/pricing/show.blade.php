@@ -43,14 +43,6 @@
 
                                             </div>
                                         </div>
-                                    @else
-                                        <div class="post-item">
-                                            <div class="post-widget-info">
-                                                <h5 class="post-widget-title">
-                                                    Появятся в скором времени!
-                                                </h5>
-                                            </div>
-                                        </div>
                                     @endif
                                 @endforeach
                             </div>
