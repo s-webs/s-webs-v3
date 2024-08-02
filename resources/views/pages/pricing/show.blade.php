@@ -31,7 +31,7 @@
                             <h2 class="widget-title">Интересное</h2>
                             <div class="gp-posts-widget-wrapper">
                                 @foreach($prices as $price)
-                                    @if($price->id != $item->id)
+                                    @if($price->id != $item->id && $price->slug)
                                         <div class="post-item">
                                             <div class="post-widget-info">
                                                 <h5 class="post-widget-title">
