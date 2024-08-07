@@ -49,7 +49,7 @@ return [
         'file'  => [
             'folder_name'  => 'files',
             'startup_view' => 'list',
-            'max_size'     => 50000, // size in KB
+            'max_size'     => 500000, // size in KB
             'thumb' => true,
             'thumb_width' => 80,
             'thumb_height' => 80,
@@ -61,6 +61,8 @@ return [
                 'image/webp',
                 'application/pdf',
                 'text/plain',
+                'video/mp4',
+                'video/mpeg'
             ],
         ],
         'image' => [

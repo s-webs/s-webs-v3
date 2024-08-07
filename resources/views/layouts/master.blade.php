@@ -42,7 +42,11 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRHD1TE7F5"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
 
     gtag('config', 'G-QRHD1TE7F5');
@@ -92,11 +96,6 @@
 
 
 <div id="main_content" class="main-content">
-
-
-    <!--=========================-->
-    <!--=        Navbar         =-->
-    <!--=========================-->
     <header class="site-header header-agency header-transparent header-fixed" data-header-fixed="true"
             data-mobile-menu-resolution="992">
         <div class="container">
@@ -137,6 +136,9 @@
                         <ul class="astriol-main-menu">
                             <li class="menu-item-depth-0">
                                 <a href="/">Главная</a>
+                            </li>
+                            <li class="menu-item-depth-0">
+                                <a href="/about">О нас</a>
                             </li>
                             {{--                            <li class="has-submenu menu-item-depth-0">--}}
                             {{--                                <a href="##">О нас</a>--}}

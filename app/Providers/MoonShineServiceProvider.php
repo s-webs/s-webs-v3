@@ -8,6 +8,7 @@ use App\MoonShine\Resources\PricingResource;
 use App\MoonShine\Resources\ProjectCategoryResource;
 use App\MoonShine\Resources\ProjectResource;
 use App\MoonShine\Resources\SeoResource;
+use App\MoonShine\Resources\TeamResource;
 use MoonShine\Providers\MoonShineApplicationServiceProvider;
 use MoonShine\MoonShine;
 use MoonShine\Menu\MenuGroup;
@@ -50,6 +51,7 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
 
             MenuItem::make('Цены', new PricingResource()),
             MenuItem::make('SEO', new SeoResource()),
+            MenuItem::make('Команда', new TeamResource()),
 
             MenuItem::make('Документация MoonShine', 'https://moonshine-laravel.com/docs')
                 ->badge(fn() => 'Check')

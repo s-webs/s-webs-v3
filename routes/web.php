@@ -11,3 +11,5 @@ Route::get('/portfolio-all', [\App\Http\Controllers\Pages\PortfolioController::c
 Route::get('/portfolio-{id}', [\App\Http\Controllers\Pages\PortfolioController::class, 'index'])->name('portfolio.index');
 Route::get('/pricing', [\App\Http\Controllers\Pages\PricingController::class, 'index'])->name('pricing.index');
 Route::get('/pricing/{slug}', [\App\Http\Controllers\Pages\PricingController::class, 'show'])->name('pricing.show');
+Route::get('/about', [\App\Http\Controllers\Page\AboutController::class, 'index'])->name('about.index');
+Route::get('/about/{slug}', [\App\Http\Controllers\Page\AboutController::class, 'show'])->name('about.show');
