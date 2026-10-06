@@ -4,7 +4,7 @@
         <div class="container page-banner-pr">
             <div class="page-title-wrapper">
                 <h1 class="page-title">
-                    {{$project->name}}
+                    {{ $project->seo_h1 ?: $project->name }}
                 </h1>
             </div>
         </div>

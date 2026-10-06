@@ -8217,7 +8217,7 @@ Banner Main
 .reach-boxs {
 	padding: 105px 0 90px;
 	background: #fcfbff;
-	background-image: url(../../media/background/reachbox_bg.jpg);
+	background-image: url(../../media/background/reachbox_bg.webp);
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -11691,7 +11691,7 @@ Banner Main
 .testimonials {
 	padding: 120px 0;
 	background: #fbfbfd;
-	background-image: url(../../media/background/testimonial-two.png);
+	background-image: url(../../media/background/testimonial-two.webp);
 	background-size: cover;
 	background-position: center center;
 }
@@ -11942,7 +11942,7 @@ Banner Main
 
 .testimonials-community {
 	position: relative;
-	background-image: url("../../media/background/testi_bg2.jpg");
+	background-image: url("../../media/background/testi_bg2.webp");
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -12272,7 +12272,7 @@ Banner Main
 }
 
 .testimonials-creative {
-	background-image: url("../../media/background/testi-bgc.jpg");
+	background-image: url("../../media/background/testi-bgc.webp");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -12885,7 +12885,7 @@ Banner Main
 /* Pricing Agency */
 .pricing-agency {
 	position: relative;
-	background-image: url("../../media/background/pricing_bg.jpg");
+	background-image: url("../../media/background/pricing_bg.webp");
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -16532,7 +16532,7 @@ blockquote cite {
 .call-to-action-wrapper .action-content-inner {
 	background: #4533c0;
 	padding: 40px 50px 0 100px;
-	background-image: url(../../media/call-to-action/action_bg.jpg);
+	background-image: url(../../media/call-to-action/action_bg.webp);
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;

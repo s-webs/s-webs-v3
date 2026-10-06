@@ -1,12 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <!-- Meta Data -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    @seo
+    @php($meta = \App\Support\SeoMeta::forPage($seoEntity ?? null))
+    <title>{{ $meta['title'] }}</title>
+    @if($meta['description'])<meta name="description" content="{{ $meta['description'] }}">@endif
+    @if($meta['keywords'])<meta name="keywords" content="{{ $meta['keywords'] }}">@endif
+    <meta name="robots" content="{{ $meta['robots'] }}">
+    <link rel="canonical" href="{{ $meta['canonical'] }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ $meta['canonical'] }}">
+    <meta property="og:title" content="{{ $meta['ogTitle'] }}">
+    @if($meta['ogDescription'])<meta property="og:description" content="{{ $meta['ogDescription'] }}">@endif
+    @if($meta['image'])<meta property="og:image" content="{{ $meta['image'] }}">@endif
+    @if($meta['image'] && $meta['imageAlt'])<meta property="og:image:alt" content="{{ $meta['imageAlt'] }}">@endif
+    <meta name="twitter:card" content="{{ $meta['image'] ? 'summary_large_image' : 'summary' }}">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/favicon-s-webs.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-s-webs.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-s-webs.png">

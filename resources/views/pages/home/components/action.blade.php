@@ -17,8 +17,8 @@
     <!-- /.container -->
 
     <div class="background-shapewrap">
-        <img src="/media/background/shape1.png" data-parallax='{"y": 100}' class="shape-one" alt="shape">
-        <img src="/media/background/shape2.png" data-parallax='{"y": -100}' class="shape-two" alt="shape">
-        <img src="/media/background/shape3.png" class="shape-three" alt="shape">
+        <img src="/media/background/shape1.webp" data-parallax='{"y": 100}' class="shape-one" alt="shape">
+        <img src="/media/background/shape2.webp" data-parallax='{"y": -100}' class="shape-two" alt="shape">
+        <img src="/media/background/shape3.webp" class="shape-three" alt="shape">
     </div>
 </section>

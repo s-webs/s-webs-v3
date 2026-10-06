@@ -21,11 +21,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $categories = ProjectCategory::query()
-            ->where('is_active', 1)
-            ->whereHas('projects')
-            ->orderBy('order')
-            ->get();
-        View::share('categories', $categories);
+        View::composer('layouts.master', function ($view): void {
+            $categories = ProjectCategory::query()
+                ->where('is_active', true)
+                ->whereHas('projects', fn ($query) => $query->where('is_active', true))
+                ->orderBy('order')
+                ->get();
+            $view->with('categories', $categories);
+        });
     }
 }

@@ -3,11 +3,26 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "images:dry-run": "node scripts/convert-images.mjs",
+        "images:convert": "node scripts/convert-images.mjs --write",
+        "images:verify": "node scripts/verify-webp.mjs",
+        "lint:php": "node scripts/lint-php.mjs"
     },
     "devDependencies": {
+        "@vitejs/plugin-vue": "^5.2.4",
         "axios": "^1.6.4",
         "laravel-vite-plugin": "^1.0",
+        "php-parser": "^3.7.0",
+        "sharp": "0.34.4",
         "vite": "^5.0"
+    },
+    "dependencies": {
+        "@phosphor-icons/vue": "^2.2.1",
+        "@tiptap/extension-image": "^3.31.4",
+        "@tiptap/pm": "^3.31.4",
+        "@tiptap/starter-kit": "^3.31.4",
+        "@tiptap/vue-3": "^3.31.4",
+        "vue": "^3.5.43"
     }
 }

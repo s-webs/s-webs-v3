@@ -2,14 +2,14 @@
 @section('content')
     <section class="page-banner">
         <div class="page-title-wrapper text-center">
-            <h1 class="page-title">{{ $item->seo_title ?? $item->name ?? 'S-WEBS' }}</h1>
+            <h1 class="page-title">{{ $item->seo_h1 ?: $item->name ?: 'S-WEBS' }}</h1>
         </div>
         <ul class="banner-pertical">
-            <li><img src="/media/banner/header/crose.png" alt="astriol pertical"></li>
-            <li><img src="/media/banner/header/box.png" alt="astriol pertical"></li>
-            <li><img src="/media/banner/header/dot.png" alt="astriol pertical"></li>
-            <li><img src="/media/banner/header/dot_sm.png" data-parallax='{"y": 100}' alt="astriol pertical"></li>
-            <li><img src="/media/banner/header/line.png" data-parallax='{"y": 50, "x": 100}' alt="astriol pertical">
+            <li><img src="/media/banner/header/crose.webp" alt="astriol pertical"></li>
+            <li><img src="/media/banner/header/box.webp" alt="astriol pertical"></li>
+            <li><img src="/media/banner/header/dot.webp" alt="astriol pertical"></li>
+            <li><img src="/media/banner/header/dot_sm.webp" data-parallax='{"y": 100}' alt="astriol pertical"></li>
+            <li><img src="/media/banner/header/line.webp" data-parallax='{"y": 50, "x": 100}' alt="astriol pertical">
             </li>
             <li data-parallax='{"y": -100}'></li>
             <li></li>

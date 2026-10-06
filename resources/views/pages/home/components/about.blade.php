@@ -10,7 +10,7 @@
                         </h3>
                     </div>
                     <div class="image-wrapper wow fadeInRight">
-                        <img src="/media/home/home_page_470x570.png" alt="astriol about">
+                        <img src="/media/home/home_page_470x570.webp" alt="astriol about">
                     </div>
                 </div>
             </div>

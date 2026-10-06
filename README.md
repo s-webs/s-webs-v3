@@ -1,66 +1,62 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# S-WEBS
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Сайт веб-студии: главная страница, портфолио, услуги и цены, команда, SEO и административная панель.
 
-## About Laravel
+## Требования
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- PHP 8.4 с расширениями ctype, curl, dom, fileinfo, mbstring, openssl, pdo, xml и xmlwriter
+- Composer 2
+- SQLite или другая база данных, поддерживаемая Laravel
+- Node.js и pnpm для сборки реактивной админ-панели
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Зависимости зафиксированы в composer.lock. Проект использует Laravel 12. Новая панель находится по адресу /admin.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Локальный запуск
 
-## Learning Laravel
+1. Выполнить composer install.
+2. Скопировать .env.example в .env, указать APP_URL и параметры БД.
+3. Для нового окружения выполнить php artisan key:generate. На существующем сервере сохранять действующий APP_KEY.
+4. Если используется SQLite, создать файл database/database.sqlite.
+5. Выполнить php artisan migrate и php artisan storage:link.
+6. Выполнить php artisan admin:create admin@example.com и ввести имя и пароль.
+7. Выполнить pnpm install и pnpm build. Собранные файлы public/build нужны панели в production.
+8. Запустить php artisan serve.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Для тестов: php artisan test. Тестовое окружение использует SQLite в памяти и файл .env.testing.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Переход с MoonShine
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Перед обновлением сделать резервную копию базы данных, public/files, public/site-media и storage/app/public.
+- После установки зависимостей и миграции создать администратора командой admin:create. Учётные записи MoonShine не используются новой панелью; существующие записи в moonshine_users автоматически не удаляются.
+- Контент в таблицах projects, project_categories, prices, teams и seo сохраняется. Новые изображения загружаются на диск public, поэтому необходима ссылка public/storage.
+- Проверить доступ к /admin, редактирование всех разделов, существующие изображения и публичные страницы.
+- На production выполнить php artisan sitemap:generate после установки корректного APP_URL. Команда записывает public/sitemap.xml.
+- Настроить веб-сервер так, чтобы корнем сайта был каталог public, а PHP обрабатывался версией 8.4.
 
-## Laravel Sponsors
+Панель использует учётные записи users с флагом is_admin. Публичной регистрации администраторов нет. Интерфейс построен на Vue 3 и использует Phosphor Icons: списки, поиск, фильтр статуса, формы и предпросмотр изображений обновляются без перезагрузки. SEO-поля доступны для категорий, проектов, услуг, команды и отдельных URL; предпросмотр поискового сниппета находится во вкладке SEO. Публичные страницы выводят title, description, keywords, canonical, robots и Open Graph. После изменения SEO-данных выполните php artisan sitemap:generate.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+HTML-поля проектов, услуг, команды и SEO-текста редактируются через Tiptap: визуальное форматирование, заголовки, списки, цитаты, ссылки, изображения по URL, отмена/повтор и режим исходного HTML. Для существующих записей с нестандартной разметкой по умолчанию открывается исходный HTML, чтобы не потерять теги и атрибуты. Доступ к панели следует давать только доверенным редакторам.
 
-### Premium Partners
+## Изображения WebP
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+- Для существующих изображений: `pnpm images:dry-run`, затем `pnpm images:convert -- --refresh-icons` и `pnpm images:verify`. Конвертер сохраняет оригиналы, обрабатывает `public/media`, `public/site-media`, `public/files`, `public/assets` и создаёт `storage/app/webp-manifest.json` с картой и исключениями. PNG/JPEG, для которых WebP крупнее, остаются в исходном формате. При совпадении имён PNG/JPEG приоритет имеет PNG, а другой файл помечается `target-collision` и не заменяется. Фавиконки не меняются.
+- После проверки файлов выполнить `php artisan images:migrate-webp` для предварительного просмотра замен в БД. Команда `php artisan images:migrate-webp --write` записывает исходные значения изменяемых полей в `storage/app/webp-db-backup-*.json` и затем обновляет ссылки. После этого повторный сухой прогон должен показать 0 замен.
+- Новые изображения из админки сохраняются на публичном диске как WebP. Для доступа к ним нужна ссылка `public/storage` → `storage/app/public` (`php artisan storage:link`). PHP должен иметь GD с WebP или Imagick с WebP.
+- После миграции выполнить `php artisan sitemap:generate` и проверить публичные страницы, изображения и Open Graph. При откате вернуть значения из резервной копии БД и предыдущую версию шаблонов; оригинальные изображения конвертер не удаляет.
 
-## Contributing
+## ИИ-помощник и администраторы
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- В `/admin/settings` можно указать OpenAI API key, модель, включить ИИ и задать дневные лимиты. Ключ хранится в БД в зашифрованном виде через `APP_KEY`; после сохранения его значение не выводится в интерфейс или API. Сохраните действующий `APP_KEY` при переносе БД, иначе ключ нельзя будет расшифровать.
+- Единый ИИ-помощник открывается плавающим виджетом на всех экранах `/admin`. Команда «Проведи SEO-аудит» проверяет опубликованные страницы без обращения к OpenAI. Команда «Предложи SEO-правки» готовит план для трёх страниц с приоритетными проблемами; правки применяются только после просмотра и подтверждения. Прикреплённые скриншоты помогают подготовить карточку проекта в портфолио; перед сохранением нужно проверить поля и заполнить недостающие сведения. По умолчанию проект сохраняется черновиком.
+- Помощник может предложить новую версию содержимого HTML-редактора для проекта, услуги, участника команды или SEO-страницы. Откройте запись и нажмите «Редактировать с ИИ» рядом с редактором либо назовите страницу в общем чате, например «Улучши текст страницы «Сайт визитка»». При одинаковых названиях выберите нужную запись. Предложение показывает исходный и новый HTML; запись меняется только после нажатия «Применить». Ссылки и изображения сохраняются, опасная разметка удаляется, а нестандартную HTML-разметку помощник просит редактировать вручную.
+- Снимки для анализа временно хранятся приватно и удаляются после применения, отклонения или истечения срока действия предложения (24 часа). Ежедневная очистка запускается командой `php artisan assistant:prune` через Laravel Scheduler; настройте выполнение `php artisan schedule:run` каждую минуту на сервере. Лимиты запросов и токенов общие для виджета и старого API черновиков.
+- В `/admin/admins` можно создавать, редактировать и удалять аккаунты администраторов. Самого себя и последнего администратора удалить нельзя. Пароль нового аккаунта должен содержать не менее 12 символов.
+- Для включения на другом окружении выполнить `php artisan migrate --force`, собрать фронтенд и затем сохранить ключ в настройках админки. Реальный вызов OpenAI требует действующего ключа и доступа сервера к API.
 
-## Code of Conduct
+## Структура
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- routes/web.php и routes/admin.php — публичные и административные маршруты
+- app/Http/Controllers/Pages и app/Http/Controllers/Page — публичная часть
+- app/Http/Controllers/Admin — панель управления
+- resources/views/admin — интерфейс панели
+- app/Console/Commands/GenerateSitemap.php — генерация карты сайта

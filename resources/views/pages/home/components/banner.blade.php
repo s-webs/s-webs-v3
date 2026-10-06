@@ -1,5 +1,5 @@
 <section class="banner banner-agency" data-dynamic-bgrnd="#feede6">
-    <div class="banner-shape" data-bg-image="/media/banner/agency/top_shape_bg.png">
+    <div class="banner-shape" data-bg-image="/media/banner/agency/top_shape_bg.webp">
 
     </div>
     <div class="container">
@@ -29,8 +29,8 @@
                 <div class="col-lg-6">
                     <div class="agency-banner-element-wrapper">
                         <ul class="banner-agency-animate-element">
-                            <li><img src="/media/mockup/tablet.png" class="wow gpUpX" alt="astriol"></li>
-                            <li><img src="/media/mockup/mobile.png" class="wow gpUpSmX" data-wow-delay="0.3s"
+                            <li><img src="/media/mockup/tablet.webp" class="wow gpUpX" alt="astriol"></li>
+                            <li><img src="/media/mockup/mobile.webp" class="wow gpUpSmX" data-wow-delay="0.3s"
                                      alt="astriol"></li>
                         </ul>
                     </div>
@@ -41,10 +41,10 @@
                 <ul class="banner-pertical">
                     <li class="bubble1"></li>
                     <li class="bubble2"></li>
-                    <li><img src="/media/banner/agency/p1.png" alt="astriol pertical"></li>
-                    <li><img src="/media/banner/agency/p2.png" alt="astriol pertical"></li>
-                    <li><img src="/media/banner/agency/p3.png" alt="astriol pertical"></li>
-                    <li><img src="/media/banner/agency/p4.png" alt="astriol pertical"></li>
+                    <li><img src="/media/banner/agency/p1.webp" alt="astriol pertical"></li>
+                    <li><img src="/media/banner/agency/p2.webp" alt="astriol pertical"></li>
+                    <li><img src="/media/banner/agency/p3.webp" alt="astriol pertical"></li>
+                    <li><img src="/media/banner/agency/p4.webp" alt="astriol pertical"></li>
                     <li class="bubble3"></li>
                     <li class="bubble4"></li>
                     <li class="bubble5"></li>

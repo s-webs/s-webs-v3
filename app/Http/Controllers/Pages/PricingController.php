@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Price;
 use App\Models\ProjectCategory;
 use Illuminate\Http\Request;
-use Leeto\Seo\Seo;
 
 class PricingController extends Controller
 {
@@ -26,9 +25,6 @@ class PricingController extends Controller
 
         $item = Price::query()->where('slug', $slug)->firstOrFail();
         $prices = Price::query()->where('is_active', true)->orderBy('created_at', 'desc')->limit(5)->get();
-        Seo::title($item->seo_title ?? $item->name);
-        Seo::description($item->seo_description ?? 'Хотите создать сайт? Давайте сделаем это!');
-        Seo::keywords($item->seo_keywords ?? 'создать сайт, разработать сайт, сколько стоит сайт, создать сайт цена, создать сайт в шымкенте');
-        return view('pages.pricing.show', compact('item', 'categories', 'prices'));
+        return view('pages.pricing.show', [...compact('item', 'categories', 'prices'), 'seoEntity' => $item]);
     }
 }

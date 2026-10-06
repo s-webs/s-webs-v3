@@ -19,6 +19,6 @@ class AboutController extends Controller
     {
         $team = Team::query()->where('slug', $slug)->firstOrFail();
 
-        return view('pages.about.show', compact('team'));
+        return view('pages.about.show', [...compact('team'), 'seoEntity' => $team]);
     }
 }

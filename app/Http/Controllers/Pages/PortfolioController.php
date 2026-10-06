@@ -17,7 +17,7 @@ class PortfolioController extends Controller
             ->where('is_active', true)
             ->orderBy('order', 'desc')
             ->get();
-        return view('pages.potfolio.index', compact('category', 'projects'));
+        return view('pages.potfolio.index', [...compact('category', 'projects'), 'seoEntity' => $category]);
     }
 
     public function all()
@@ -42,6 +42,6 @@ class PortfolioController extends Controller
             ->select('slug')
             ->first();
 
-        return view('pages.potfolio.show', compact('project', 'lastProjects', 'previousProject', 'nextProject'));
+        return view('pages.potfolio.show', [...compact('project', 'lastProjects', 'previousProject', 'nextProject'), 'seoEntity' => $project]);
     }
 }
